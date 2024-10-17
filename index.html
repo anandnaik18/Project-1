@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latics - Recruitment Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Smooth light background */
+        }
+
+        header {
+            background-color: #009688; /* Turquoise color */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .chatgpt-title {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+            color: #00796b; /* Darker turquoise for emphasis */
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reports {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .report-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #009688; /* Turquoise color */
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #2e7d32; /* Motivational phrase color */
+            font-size: 1.5em;
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">LATICS</div>
+        <nav>
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Logout</a></li>
+                <li><a href="#">Email</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <h2 id="motivation"></h2> <!-- Placeholder for motivational phrase -->
+
+    <main>
+        <section class="reports">
+            <div class="report-card">
+                <h3>Total Jobs</h3>
+                <p>150</p>
+            </div>
+            <div class="report-card">
+                <h3>Total Applicants</h3>
+                <p>150</p>
+            </div>
+            <div class="report-card">
+                <h3>Total Submissions</h3>
+                <p>200</p>
+            </div>
+            <div class="report-card">
+                <h3>Total Interviews</h3>
+                <p>80</p>
+            </div>
+            <div class="report-card">
+                <h3>Placements</h3>
+                <p>30</p>
+            </div>
+        </section>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Job</th>
+                    <th>Client</th>
+                    <th>Applicant</th>
+                    <th>Resume</th>
+                    <th>Assigned</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>J123</td>
+                    <td>Client A</td>
+                    <td>Applicant X</td>
+                    <td><a href="#">View Resume</a></td>
+                    <td>Recruiter 1</td>
+                    <td>Pending</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>J124</td>
+                    <td>Client B</td>
+                    <td>Applicant Y</td>
+                    <td><a href="#">View Resume</a></td>
+                    <td>Recruiter 2</td>
+                    <td>Interview Scheduled</td>
+                </tr>
+                <!-- Add more rows as necessary -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Latics. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Array of motivational phrases
+        const phrases = [
+            "Take a break!",
+            "Stretch your legs!",
+            "Drink some water!",
+            "Cheer up!",
+            "Focus on your goals!",
+            "Keep pushing!",
+            "Stay positive!",
+            "You've got this!",
+            "Believe in yourself!",
+            "Keep up the great work!",
+            "Make today amazing!",
+            "Task to Do: Prioritize your day!",
+            "Stay strong and motivated!"
+        ];
+
+        // Function to display a random motivational phrase
+        function displayMotivation() {
+            const randomIndex = Math.floor(Math.random() * phrases.length);
+            const motivationElement = document.getElementById('motivation');
+            motivationElement.textContent = phrases[randomIndex];
+        }
+
+        // Call the function when the page loads
+        displayMotivation();
+    </script>
+</body>
+</html>
